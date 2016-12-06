@@ -1,13 +1,13 @@
 var app = angular.module("suggestionbox", ["ngRoute"]);
-app.config(function($routeprovider){
-    $routeprovider
+app.config(function($routeProvider){
+    $routeProvider
         .when('/', {
             controller: 'MainController',
-            templateUrl: 'main.html'
+            templateUrl: 'views/main.html'
         })
         .when ('/:id',{
             controller: 'PostController',
-            templateUrl: 'post.html'
+            templateUrl: 'views/post.html'
         })
         .otherwise({
             redirectTo: '/'
