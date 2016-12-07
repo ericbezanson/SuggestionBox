@@ -5,7 +5,7 @@ app.config(function($routeProvider){
             controller: 'MainController',
             templateUrl: 'views/main.html'
         })
-        .when ('/:id',{
+        .when ('/suggestion/:id',{
             controller: 'CommentController',
             templateUrl: 'views/suggestion.html'
         })

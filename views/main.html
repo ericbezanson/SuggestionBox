@@ -15,7 +15,7 @@
                 <div class="upvotes">
                     <p>Upvotes: {{ post.upvotes }}</p>
                     <span class="glyphicon glyphicon-plus-sign" ng-click="upVote(post)"></span>
-                    <a href="#/views/suggestion/{{$index}}">Comments</a>
+                    <a href="#/suggestion/{{ post.id }}">Comments</a>
                 </div>
             </div>
         </div>
