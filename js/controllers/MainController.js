@@ -10,7 +10,7 @@ if(!$scope.title || $scope.title === "") {
  
     //push suggestion posts in suggestions.js
     $scope.posts.push({
-        id: $scope.posts.length +1,
+        id: $scope.posts.length,
         title: $scope.title,
         upvotes: 0,
         comments: []

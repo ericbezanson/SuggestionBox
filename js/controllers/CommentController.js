@@ -2,14 +2,18 @@ app.controller('CommentController', ['$scope','$routeParams','suggestions', func
     $scope.post = suggestions.posts[$routeParams.id];
 
     $scope.addComment = function(){
-        var comment = $scope.comment;
+        var comment = $scope.comments;
+        if (!$scope.body || $scope.body === '') {
+                return;
+            }
 
         $scope.post.comments.push({
-        body: '',
-        upvotes: 0,
+        body: $scope.body,
+        upvotes: 0
     });
     }
     $scope.upVote = function(comments) {
   	comments.upvotes += 1;
   };        
 }])
+

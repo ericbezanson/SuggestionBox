@@ -1,17 +1,19 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h3>{{post.title}}</h3>
-            <div ng-repeat="comment in post.comments">
-                <p>{{comment.body}}</p>
-                <span class="glyphicon glyphicon-plus-sign" ng-click="upVote(post)">{{comment.upvote}}</span>
+            <div class="suggestionPost">
+                <h3>{{post.title}}</h3>
+                <div ng-repeat="comment in post.comments">
+                    <span>{{comment.body}}</span>
+                    <span class="glyphicon glyphicon-plus-sign" ng-click="upVote(post)">Upvotes: {{ comment.upvotes }}</span>
+                </div>
             </div>
         </div>
         <div class="col-md-12">
             <form ng-submit="addComment()" style="margin-top: 50px">
-                <h3> Add a Comment </h3>
+                <h1> Add a Comment </h1>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="What do you think?" ng-model="title"></input>
+                    <input ng-model="body" type="text" class="form-control" placeholder="Your suggestion here"></input>
                 </div>
                 <button type="submit" class="btn btn-primary">Suggest</button>
             </form>
