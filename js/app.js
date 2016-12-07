@@ -6,8 +6,8 @@ app.config(function($routeProvider){
             templateUrl: 'views/main.html'
         })
         .when ('/:id',{
-            controller: 'PostController',
-            templateUrl: 'views/post.html'
+            controller: 'CommentController',
+            templateUrl: 'views/suggestion.html'
         })
         .otherwise({
             redirectTo: '/'

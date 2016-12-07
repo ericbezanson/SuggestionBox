@@ -10,15 +10,17 @@ if(!$scope.title || $scope.title === "") {
  
     //push suggestion posts in suggestions.js
     $scope.posts.push({
+        id: $scope.posts.length +1,
         title: $scope.title,
         upvotes: 0,
+        comments: []
     });
  
     //after submit, clear input
     $scope.title = '';
     };
 //function to add an upvote to a post
-$scope.upVote = function(post) {
+$scope.upVote = function(posts) {
   	posts.upvotes += 1;
   };
 
