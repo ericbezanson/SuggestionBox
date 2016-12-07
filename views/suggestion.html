@@ -3,7 +3,7 @@
         <div class="col-md-16">
             <h3>{{post.title}}</h3>
             <div ng-repeat="comment in comments">
-                <p>{{post.comment}}</p>
+                <p>{{comment.body}}</p>
                 <span class="glyphicon glyphicon-plus-sign" ng-click="upVote(post)"></span>
             </div>
         </div>
